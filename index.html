@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Conversion</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="header">
+          <h1>Conversion Calculator</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6" id="for-box">
+              <label>Pounds</label>
+              <input type="number" id="n2" placeholder="Pounds: ">
+  
+              <select id="weights">
+                <option value="grams">Grams</option>
+                <option value="kilograms">Kilograms</option>
+                <option value="miligrams">Miligrams</option>
+              </select>
+              <br />
+              <br />
+  
+              <button onclick="myFunction()">Convert</button>
+              <br /><br />
+              <input type="text" id="result2" placeholder="Result" />
+            </div>
+    
+          <!----------------div first col-6 end--------------->
+
+          <!----------------div Second col-6 start------------->
+          <div class="col-md-6" id="for-box">
+          <label>Meters</label>
+            <input type="number" id="n3" placeholder="Meters: " />
+
+            <select id="lengths">
+              <option value="inches">Inches</option>
+              <option value="kilometers">Kilometers</option>
+              <option value="centimeters">Centimeters</option>
+            </select>
+            <br />
+            <br />
+
+            <button onclick="myFunction1()">Convert</button>
+            <br /><br />
+            <input type="text" id="result3" placeholder="Result" />
+          </div>
+          <!----------------div second col-6 end--------------->
+        </div>
+        <!----------------div row end--------------->
+
+        <!----------------div SECOND ROW START------------->
+        <div class="row">
+          <div class="col-md-6" id="for-box">
+            <label>Minutes</label>
+            <input type="number" id="n4" placeholder="Minutes: " />
+
+            <select id="times">
+              <option value="seconds">Seconds</option>
+              <option value="hours">Hours</option>
+              <option value="miliseconds">Miliseconds</option>
+            </select>
+            <br />
+            <br />
+
+            <button onclick="myFunction2()">Convert</button>
+            <br /><br />
+            <input type="text" id="result4" placeholder="Result" />
+          </div>
+          <!----------------div first col-6 end--------------->
+
+          <!----------------div Second col-6 start------------->
+          <div class="col-md-6" id="for-box">
+            <label>Celsius</label>
+            <input type="number" id="n5" placeholder="Celsius: " />
+
+            <select id="temperatures">
+              <option value="fahrenheit">Fahrenheit</option>
+              <option value="kelvins">Kelvins</option>
+            </select>
+            <br />
+            <br />
+
+            <button onclick="myFunction3()">Convert</button>
+            <br /><br />
+            <input type="text" id="result5" placeholder="Result" />
+          </div>
+          <!----------------div second col-6 end--------------->
+        </div>
+        <!----------------div SECONED ROW end--------------->
+
+
+      </div>
+      <!----------------div container end--------------->
+    </div>
+    <!----------------div main end--------------->
+
+    <script>
+
+//Weight script
+function 
+    myFunction()
+    {
+        var n2 = parseInt(document.getElementById("n2").value);
+        
+        var operator2 = document.getElementById("weights").value;
+        
+        if(operator2 === "grams")
+            {
+                document.getElementById("result2").value = n2 * 453.6;
+            }
+        if(operator2 === "kilograms")
+            {
+                document.getElementById("result2").value = n2 / 2.205;
+            }
+       if(operator2 === "miligrams")
+            {
+                document.getElementById("result2").value = n2 *  453600;
+            }
+    }
+
+
+ //Length script
+function 
+    myFunction1()
+    {
+        var n3 = parseInt(document.getElementById("n3").value);
+        
+        var operator = document.getElementById("lengths").value;
+        
+        if(operator === "inches")
+            {
+                document.getElementById("result3").value = n3 * 39.37;
+            }
+        if(operator === "kilometers")
+            {
+                document.getElementById("result3").value = n3 / 1000;
+            }
+       if(operator === "centimeters")
+            {
+                document.getElementById("result3").value = n3 *  100;
+            }
+    }
+
+
+    //Time script
+function 
+    myFunction2()
+    {
+        var n4 = parseInt(document.getElementById("n4").value);
+        
+        var operator1 = document.getElementById("times").value;
+        
+        if(operator1 === "seconds")
+            {
+                document.getElementById("result4").value = n4 * 60;
+            }
+        if(operator1 === "hours")
+            {
+                document.getElementById("result4").value = n4 / 60;
+            }
+       if(operator1 === "miliseconds")
+            {
+                document.getElementById("result4").value = n4 *  60000;
+            }
+    }
+
+
+        //Temperature script
+function 
+    myFunction3()
+    {
+        var n5 = parseInt(document.getElementById("n5").value);
+        
+        var operator = document.getElementById("temperatures").value;
+        
+        if(operator === "fahrenheit")
+            {
+                document.getElementById("result5").value = (n5 * 1.8)+32;
+            }
+        if(operator === "kelvins")
+            {
+                document.getElementById("result5").value = n5 +  273.15;
+            }
+
+    }
+
+
+
+
+
+    </script>
+  </body>
+</html>
